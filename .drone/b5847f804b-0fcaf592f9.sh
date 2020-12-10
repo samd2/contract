@@ -30,7 +30,7 @@ export BOOST_CI_SRC_FOLDER=$(pwd)
 
 echo '==================================> BEFORE_SCRIPT'
 
-. .drone/before-script.sh
+. $DRONE_CURRENT_BUILD_DIR/.drone/before-script.sh
 
 echo '==================================> COMPILE'
 
@@ -39,5 +39,4 @@ ci/travis/codecov.sh
 
 echo '==================================> AFTER_SUCCESS'
 
-cd $DRONE_CURRENT_BUILD_DIR
-. .drone/after-success.sh
+. $DRONE_CURRENT_BUILD_DIR/.drone/after-success.sh
