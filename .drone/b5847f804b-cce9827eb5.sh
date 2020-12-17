@@ -32,7 +32,7 @@ echo '==================================> BEFORE_SCRIPT'
 
 . $DRONE_CURRENT_BUILD_DIR/.drone/before-script.sh
 
-echo '==================================> COMPILE'
+echo '==================================> SCRIPT'
 
 if  [ -n "${COVERITY_SCAN_NOTIFICATION_EMAIL}" -a \( "$DRONE_BRANCH" = "develop" -o "$DRONE_BRANCH" = "master" \) -a "$DRONE_BUILD_EVENT" = "push" ] ; then
 cd $BOOST_ROOT/libs/$SELF

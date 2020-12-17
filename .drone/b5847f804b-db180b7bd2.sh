@@ -32,7 +32,7 @@ echo '==================================> BEFORE_SCRIPT'
 
 . $DRONE_CURRENT_BUILD_DIR/.drone/before-script.sh
 
-echo '==================================> COMPILE'
+echo '==================================> SCRIPT'
 
 cd $BOOST_ROOT/libs/$SELF
 ci/travis/valgrind.sh
